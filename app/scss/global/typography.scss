@@ -1,0 +1,125 @@
+@use '../util/'as *;
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--poppins);
+    font-size: rem(32);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(48);
+    }
+}
+
+h2 {
+    font-family: var(--poppins);
+    font-size: rem(24);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(34);
+    }
+}
+
+h3 {
+    font-family: var(--poppins);
+    font-size: rem(20);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(24);
+    }
+}
+
+h4 {
+    font-family: var(--poppins);
+    font-size: rem(16);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(20);
+    }
+}
+
+h5 {
+    font-family: var(--poppins);
+    font-size: rem(14);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(16);
+    }
+}
+
+h6 {
+    font-family: var(--poppins);
+    font-size: rem(12);
+    font-weight: bold;
+
+    @include breakpoint(large) {
+        font-size: rem(14);
+    }
+}
+
+
+.body_text {
+    font-family: var(--roboto);
+    font-size: rem(14);
+    font-weight: normal;
+
+    @include breakpoint(medium) {
+        font-size: rem(16);
+    }
+
+    @include breakpoint(large) {
+        font-size: rem(18);
+    }
+}
+
+
+.caption {
+    font-family: var(--roboto);
+    font-size: rem(14);
+    font-weight: normal;
+
+    @include breakpoint(medium) {
+        font-size: rem(16);
+    }
+
+}
+
+
+.footer_heading {
+    font-family: var(--roboto);
+    font-size: rem(16);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+        font-size: rem(18);
+    }
+}
+
+.footer_text {
+    font-family: var(--roboto);
+    font-size: rem(14);
+    font-weight: normal;
+
+    @include breakpoint(medium) {
+        font-size: rem(16);
+    }
+}
+
+.naslovna__caption {
+    font-family: var(--poppins);
+    font-size: rem(32);
+
+    @include breakpoint(large) {
+        font-size: rem(48);
+    }
+}

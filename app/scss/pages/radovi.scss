@@ -1,0 +1,103 @@
+@use '../util'as *;
+
+.radovi {
+
+    h2,
+    h3 {
+        color: var(--dark-grey);
+    }
+
+    p,
+    li {
+        color: #494949;
+    }
+
+    a {
+        color: #5AADF9;
+    }
+
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 80%;
+            margin: auto;
+            padding: rem(20) 0;
+        }
+
+        ul {
+            padding: rem(10) 0 rem(30);
+            line-height: rem(20);
+        }
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+
+        h2 {
+            padding-top: rem(40);
+        }
+
+        p {
+            padding: rem(30) 0;
+        }
+
+        .picture {
+            display: flex;
+            gap: rem(80);
+
+            img {
+                width: 50%;
+            }
+
+            .txt {
+                width: 50%;
+
+                .blueline {
+                    margin-top: rem(10);
+                    border-left: 3px solid var(--dark-blue);
+                    padding-left: rem(6);
+                }
+            }
+        }
+    }
+}
+
+.projects {
+
+    padding: rem(60) 0 rem(80);
+
+    h2 {
+        color: var(--dark-grey);
+    }
+
+    p {
+        color: #494949;
+    }
+
+    &__naslov {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: rem(30);
+
+        .crta {
+            height: 2px;
+            background-color: var(--dark-blue);
+        }
+    }
+
+    &__projs {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+    }
+}

@@ -1,0 +1,142 @@
+@use '../util/'as *;
+
+
+.header {
+
+    &__mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: var(--dark-blue);
+        padding: rem(10) rem(40);
+
+        @include breakpoint(medium) {
+            padding: rem(20) rem(30);
+        }
+
+        .logo {
+            padding: rem(15);
+        }
+
+        .menu {
+            position: relative;
+            height: rem(18);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                width: rem(24);
+                height: rem(2);
+                border-radius: rem(4);
+                //transition: all .4s ease-in-out;
+                background-color: var(--white);
+            }
+
+            span::before,
+            span::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: rem(24);
+                height: rem(2);
+                border-radius: rem(4);
+                //transition: all .4s ease-in-out;
+                background-color: var(--white);
+            }
+
+            span::before {
+                top: 0;
+            }
+
+            span::after {
+                bottom: 0;
+            }
+        }
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+
+        .navUp {
+            background-color: var(--dark-blue);
+            padding: rem(10) rem(20);
+
+            @include breakpoint(medium) {
+                padding: rem(15) rem(30);
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                color: var(--white);
+            }
+
+            &__left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                li+li {
+                    margin-left: rem(20);
+                }
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    width: 1px;
+                    height: 30px;
+                    margin: 0 rem(15);
+                    background-color: var(--white);
+                }
+
+                li+li {
+                    margin-left: rem(20);
+                }
+            }
+        }
+
+        .navDown {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: rem(40) rem(30);
+
+            &__logo {
+                padding: 10px 15px;
+                background-color: var(--dark-blue);
+            }
+
+            &__right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    color: var(--dark-grey);
+                }
+
+                li+li {
+                    margin-left: rem(20);
+                }
+            }
+        }
+    }
+}

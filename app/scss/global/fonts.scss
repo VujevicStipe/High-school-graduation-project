@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./font/Roboto/Roboto-Regular.ttf') format('ttf');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./font/Poppins/Poppins-Bold.ttf') format('ttf');
+    font-weight: bold;
+}
+
+
+:root {
+    --roboto: 'Roboto';
+    --poppins: 'Poppins';
+}

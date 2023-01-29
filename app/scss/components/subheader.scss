@@ -1,0 +1,62 @@
+@use '../util'as *;
+
+
+.subheader {
+
+    padding: rem(30) rem(40);
+
+    @include breakpoint(medium) {
+        padding: rem(40) rem(30);
+        background-color: var(--dark-blue);
+    }
+
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+        gap: rem(2);
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+
+        .mobile_line {
+            height: 2px;
+            background-color: var(--dark-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-family: var(--roboto);
+        }
+
+    }
+
+
+    &__desktop {
+        display: none;
+
+
+        @include breakpoint(medium) {
+            display: flex;
+        }
+
+        flex-direction: column;
+        gap: rem(5);
+        color: var(--white);
+
+
+        .line {
+            height: 1px;
+            width: rem(120);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--white);
+            font-family: var(--roboto);
+        }
+    }
+
+}

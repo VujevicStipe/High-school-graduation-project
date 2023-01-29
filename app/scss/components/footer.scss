@@ -1,0 +1,38 @@
+@use '../util/'as *;
+
+.footer {
+
+    background-color: var(--dark-blue);
+    padding: rem(20) rem(40) rem(30);
+
+    @include breakpoint(medium) {
+        padding: rem(40) rem(30);
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    line-height: 22px;
+    color: var(--white);
+
+    a {
+        color: var(--white);
+    }
+
+    .time {
+        margin-top: rem(20);
+    }
+
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        justify-content: center;
+        gap: rem(100);
+        line-height: 25px;
+    }
+
+    .footer_heading {
+        padding-bottom: rem(15);
+    }
+}

@@ -1,0 +1,74 @@
+@use '../util'as *;
+
+
+.naslovna {
+    color: var(--dark-grey);
+    padding-bottom: rem(20);
+
+    @include breakpoint(medium) {
+        display: flex;
+        gap: rem(20);
+    }
+
+
+    img {
+
+        @include breakpoint(medium) {
+            width: 50%;
+            max-width: rem(762);
+        }
+    }
+
+    &__caption {
+        @include breakpoint(medium) {
+            margin-top: rem(150);
+        }
+    }
+}
+
+
+.newss {
+    display: flex;
+    flex-direction: column;
+
+    padding: rem(20) 0;
+
+
+    h1 {
+        margin: 0 auto rem(20);
+        color: var(--dark-grey);
+    }
+
+    .news {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+        }
+
+        gap: rem(20);
+
+    }
+
+    .button {
+        position: relative;
+        margin: rem(20) auto 0;
+    }
+}
+
+
+.informations {
+    margin: rem(30) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        gap: rem(30);
+    }
+}
